@@ -17,4 +17,10 @@ public class OrderLineMapper {
                 .quantity(request.quantity())
                 .build();
     }
+    public OrderLineResponse toOrderLineResponse(OrderLine orderLine) {
+        return new OrderLineResponse(
+                orderLine.getId(),
+                orderLine.getQuantity()
+        );
+    }
 }
